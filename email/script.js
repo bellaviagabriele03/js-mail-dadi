@@ -1,3 +1,7 @@
+
+
+
+
 // Mail
 // Crea un array con delle email di chi può acedere.
 // Chiedi all’utente la sua email,
@@ -15,25 +19,46 @@
 
 
 
+const email = ["gabriele@gmail.com", "pippo@gmail.com", "paperino@gmail.com"];
 
+let emailUtente = prompt("Inserisci la tua e-mail:");
 
+let risultato = false;
 
-const email = ["gabriele@gmail.com"]
-
-let emailUtente = prompt("Inserisci la tua e-mail:")
-
-let x = 1;
-
-for (let i = 0; i < x; i++) {
-
-    if (emailUtente === email[0]) {
-        console.log("Benvenuto");
-        break;
-    }else {
-        alert("Email non registrata!")
-        emailUtente = prompt("Inserisci la tua e-mail:")
-        x= x + 1;
+for (let i = 0; i < email.length; i++) {
+    let curEmail = email[i];
+    if (curEmail === emailUtente) {
+        risultato = true;
     }
 
-
 }
+
+
+if (risultato === true) {
+    console.log("Benvenuto");
+    
+}else {
+    console.log("non sei registrato");
+    
+}
+
+
+
+
+// codice con for "infinito" per poter chiedere il prompt a ripetizione:
+
+// let x = 1;
+
+// for (let i = 0; i < x; i++) {
+
+//     if (emailUtente === email[0]) {
+//         console.log("Benvenuto");
+//         break;
+//     }else {
+//         alert("Email non registrata!")
+//         emailUtente = prompt("Inserisci la tua e-mail:")
+//         x= x + 1;
+//     }
+
+
+// }
